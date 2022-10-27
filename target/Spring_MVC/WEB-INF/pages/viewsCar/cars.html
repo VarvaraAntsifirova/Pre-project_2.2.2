@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <link rel="stylesheet" href="">-->
+    <title>Cars</title>
+</head>
+<body>
+ <div>
+     <h3>List Of Cars</h3>
+     <table border="1">
+         <thead>
+         <tr>
+             <th>Model</th>
+             <th>Color</th>
+             <th>Series</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr th:each="car : ${list}">
+             <td th:text="${car.getModel()}">Model</td>
+             <td th:text="${car.getColor()}">Color</td>
+             <td th:text="${car.getSeries()}">Series</td>
+         </tr>
+         </tbody>
+     </table>
+ </div>
+</body>
+</html>
